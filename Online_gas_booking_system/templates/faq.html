@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System - FAQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+    <div class="question" onclick="toggleAnswer('faq1')">1. How do I create an account?</div>
+    <div class="answer" id="faq1">To create an account, click on the "Sign Up" or "Register" link on our homepage. Fill in the required information, including your name, email address, and a secure password. Follow the on-screen instructions to complete the registration process.</div>
+</div>
+
+<div class="faq">
+    <div class="question" onclick="toggleAnswer('faq2')">2. Can I book gas without an account?</div>
+    <div class="answer" id="faq2">While browsing the available gas options is possible without an account, you need to create an account to complete the booking process. This ensures a secure and personalized experience for our users.</div>
+</div>
+
+<div class="faq">
+    <div class="question" onclick="toggleAnswer('faq3')">3. How can I track my gas delivery?</div>
+    <div class="answer" id="faq3">Once your gas order is confirmed, you will receive a confirmation email with a tracking link. You can use this link to check the real-time status and estimated delivery time of your gas order.</div>
+</div>
+
+<!-- Add more FAQs as needed -->
+
+<script>
+    function toggleAnswer(faqId) {
+        var answer = document.getElementById(faqId);
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

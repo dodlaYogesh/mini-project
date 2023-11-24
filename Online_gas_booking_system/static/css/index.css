@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+header img.logo {
+    height: 50px;
+}
+section#hero{
+    background-image: url(https://media.istockphoto.com/id/1288462295/photo/different-types-of-gas-bottles-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=vRXxqyKKdXvMwl95WzOA6_1Q4ttYBsC4PX-GtiS0Htw=); background-repeat:no-repeat;background-position:right;background-size:contain;background-color: white;
+    }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+section#hero {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section#hero h1 {
+    color: #333;
+}
+
+section#hero p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section#benefits {
+    padding: 50px 0;
+}
+
+section#benefits h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.benefit {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.benefit img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    margin-top: 10px;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+#satish{
+    float:left;
+    border-radius: 20px;
+}
+a:hover{
+    color:skyblue;
+}
+a:active{
+    color: green;
+}

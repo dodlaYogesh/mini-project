@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+       ul{
+        list-style-type:circle;
+       }
+       button{
+        background-color: white;
+        border-radius: 10px;
+        padding-right:20px;
+        padding-left:20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 48%;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bookings</h1>
+    </header>
+    
+    <section>
+        {% for i in objects %}
+        <div class="product">
+
+            
+        <ul class="tables">
+             <li><strong> Customer name :</strong> {{i.customerName}}</li><br>
+             <li><strong> Contact number :</strong> {{i.contactNumber}}</li><br>
+             <li><strong> Gas Type :</strong> {{i.gastype}}</li><br>
+             <li><strong>Quantity:</strong>{{i.quantity}} </li>
+        </ul>
+        </div>
+        {% endfor %}
+    </section>
+    <button onclick="window.location.href='http://127.0.0.1:8000/'"> Exit</button>
+
+</body>
+</html>

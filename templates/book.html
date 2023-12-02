@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System</title>
+    <link rel="stylesheet" href="{% static 'css/book.css'%}">
+</head>
+<body style="background-image: url('https://www.shutterstock.com/image-illustration/lpg-gas-cylinder-mascot-260nw-1358864345.jpg');
+background-size:cover;background-repeat: no-repeat;">
+
+<h1>Gas Booking System</h1>
+
+
+<form id="bookingForm" action="" method="POST">{% csrf_token %}
+    <label for="customerName">Customer Name:</label>
+    <input type="text" id="customerName" name="customerName" required>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+
+    <label for="gasType">Gas Type:</label>
+        <select id="gasType" name="gasType" required>
+            <option value="domestic">Domestic</option>
+            <option value="commercial">Commercial</option>
+        </select>
+    
+    <label for="quantity">Quantity (in kg):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="50" required>
+
+    <button type="submit" >Submit Booking</button>
+    <button type="submit" onclick="window.location.href='http://127.0.0.1:8000/'" id="exit">Exit</button>
+</form>
+
+<script>
+    function submitBooking() {
+        // You can add your logic here to handle the form submission,
+        // such as sending data to the server using AJAX or other methods.
+        // For this example, let's just display an alert.
+        alert("your booking is successfully completed.")
+        
+        
+        // You may redirect the user to a confirmation page or perform other actions.
+    }
+</script>
+</body>
+</html>

@@ -62,20 +62,37 @@ button:hover {
     </style>
    
 </head>
-<body>
+<body style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=600); background-repeat: no-repeat;background-size: cover;">
     <div class="login-container">
         <h2>Login</h2>
-        <form action="login" method="post">
+        <form action="/home/" method="post" name="myform" > {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit"><a href="/" style="text-decoration: none; color: white;">Login</a></button>
+            <button type="submit" onclick="return errors()">Login</button>
             <br>
-            <p>If you did'nt have account?</p><a href="/register" style="text-decoration: none;"> register here</a>
+            
         </form>
     </div>
+    <script>
+        function errors(){
+            var un=document.myform.username.value;
+            var pwd=document.myform.password.value;
+
+            if(un=="" || un ==null)
+            {
+                alert('please provide username');
+                return false
+            }
+            if(pwd=="" || pwd ==null)
+            {
+                alert('please provide password');
+                return false
+            }
+        }
+    </script>
 </body>
 </html>

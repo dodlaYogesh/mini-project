@@ -1,12 +1,18 @@
 from django.urls import path
-from .views import gas,login,book,faq,services,mybookings,contact,register_view
+from .views import gas,login,book,faq,services,mybookings,contact,register,index,adminlogin,adminbookings,searching1
+
 urlpatterns=[
-    path('', gas),
+    path('home/', gas),
     path('login/', login),
+    path('',index),
     path('book/', book),
     path('faq/',faq),
     path('services/',services),
     path('bookings/',mybookings),
     path('contact/',contact),
-    path('register/',register_view),
-]
+    path('register/',register),
+    path('adminlogin/',adminlogin),
+    path('adminbookings/',adminbookings),
+    path('adminsearch/',searching1,name="search"),
+    
+] 

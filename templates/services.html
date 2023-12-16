@@ -1,13 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gas Booking System - Services</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
 
         h2 {
@@ -29,7 +30,20 @@
     </style>
 </head>
 <body>
-
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/bookings">Booking</a></li>
+                    <li><a href="http://127.0.0.1:8000/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/faq">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div style="margin:20px">
 <h2>Our Gas Booking Services</h2>
 
 <p>Welcome to our online gas booking system. We offer a range of services to make gas booking convenient and efficient for our customers.</p>
@@ -57,6 +71,6 @@
 </ol>
 
 <p>Thank you for choosing our gas booking services. If you have any questions or need assistance, feel free to contact our customer support team.</p>
-
+    </div>
 </body>
 </html>

@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gas Booking System - FAQs</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            
         }
 
         h2 {
@@ -31,7 +33,20 @@
     </style>
 </head>
 <body>
-
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/bookings">Booking</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div style="margin:20px">
 <h2>Frequently Asked Questions</h2>
 
 <div class="faq">
@@ -48,7 +63,7 @@
     <div class="question" onclick="toggleAnswer('faq3')">3. How can I track my gas delivery?</div>
     <div class="answer" id="faq3">Once your gas order is confirmed, you will receive a confirmation email with a tracking link. You can use this link to check the real-time status and estimated delivery time of your gas order.</div>
 </div>
-
+    </div>
 <!-- Add more FAQs as needed -->
 
 <script>

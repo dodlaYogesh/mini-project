@@ -1,0 +1,104 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookings</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color:green;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            .product {
+                margin-bottom: 20px;
+                
+                padding-bottom: 10px;
+            }
+           
+           button{
+            background-color: white;
+            border-radius: 10px;
+            padding-right:20px;
+            padding-left:20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 48%;
+            cursor: pointer;
+           }
+        </style>
+    </head>
+    <body>
+    
+        <header>
+            <h1>Bookings</h1>
+        </header><br><br>
+        <br>
+        <section>
+            
+       
+       
+       
+        <div class="product">
+            <table width="100%" border="1px">
+             <tr style="background-color: green; color:white;text-align: center;">   
+             <td><strong> Customer name      </strong> </td>{{i.customerName}}
+             <td><strong> Contact number     </strong> </td>{{i.contactNumber}}
+             <td><strong> GasType           </strong></td>{{i.gastype}}
+             <td><strong> Quantity           </strong></td>{{i.quantity}} 
+             <td><strong> Address            </strong></td>{{i.address}} 
+            </tr>
+            {% if object %}
+            {% for i in object %}
+            <tr>
+                <td> {{i.customerName}} </td>
+                <td> {{i.contactNumber}} </td>
+                <td> {{i.gastype}} </td>
+                <td> {{i.quantity}} </td>
+                <td> {{i.address}} </td>
+            </tr>
+            {% endfor %}   
+            {% endif %}  
+            
+
+            {% if object1 %}
+            {% for i in object1 %}
+            <tr>
+                <td> {{i.customerName}} </td>
+                <td> {{i.contactNumber}} </td>
+                <td> {{i.gastype}} </td>
+                <td> {{i.quantity}} </td>
+                <td> {{i.address}} </td>
+            </tr>
+            {% endfor %}    
+            {% endif %} 
+
+
+            {% if object2 %}
+            {% for i in object2 %}
+            <tr>
+                <td> {{i.customerName}} </td>
+                <td> {{i.contactNumber}} </td>
+                <td> {{i.gastype}} </td>
+                <td> {{i.quantity}} </td>
+                <td> {{i.address}} </td>
+            </tr>
+            {% endfor %}    
+            {% endif %} 
+        </table>
+        </div>
+      
+        <button onclick="window.location.href='http://127.0.0.1:8000/adminbookings'" style="margin-top: 30%;"> Exit</button><br><br>
+    </body>
+    </html>
+</body>
+</html>

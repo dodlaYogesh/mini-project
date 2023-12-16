@@ -17,8 +17,12 @@ background-size:cover;background-repeat: no-repeat;">
     <label for="customerName">Customer Name:</label>
     <input type="text" id="customerName" name="customerName" required>
 
-    <label for="contactNumber">Contact Number:</label>
+    <label for="contactNumber">Contact Numbe
+        r:</label>
     <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+
+    <label>Address:</label>
+    <textarea cols="74" rows="4" name="addr"></textarea>
 
     <label for="gasType">Gas Type:</label>
         <select id="gasType" name="gasType" required>
@@ -29,8 +33,8 @@ background-size:cover;background-repeat: no-repeat;">
     <label for="quantity">Quantity (in kg):</label>
     <input type="number" id="quantity" name="quantity" min="1" max="50" required>
 
-    <button type="submit" >Submit Booking</button>
-    <button type="submit" onclick="window.location.href='http://127.0.0.1:8000/'" id="exit">Exit</button>
+    <button type="submit" onclick="submitBooking()">Submit Booking</button>
+  
 </form>
 
 <script>

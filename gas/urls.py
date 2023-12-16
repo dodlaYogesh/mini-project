@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import gas,login,book,faq,services,mybookings,contact,register,index,adminlogin,adminbookings,searching1
+from .views import gas,login,book,faq,services,mybookings,contact,register,index,adminlogin,adminbookings,searching
 
 urlpatterns=[
     path('home/', gas),
@@ -13,6 +13,6 @@ urlpatterns=[
     path('register/',register),
     path('adminlogin/',adminlogin),
     path('adminbookings/',adminbookings),
-    path('adminsearch/',searching1,name="search"),
+    path('adminsearch/',searching,name="search"),
     
 ] 

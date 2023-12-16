@@ -152,7 +152,7 @@ def adminlogin(request):
     return render(request,'search.html',{})'''
     
 
-def searching1(request):
+def searching(request):
     se=request.POST['search']
     data=bookings.objects.filter(address__icontains=se)
     data1=bookings.objects.filter(customerName__icontains=se)

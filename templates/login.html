@@ -16,12 +16,13 @@
 }
 
 .login-container {
-    width: 300px;
+    width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 13px 21px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
 }
 
 h2 {
@@ -32,6 +33,9 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+   
+   
+    
 }
 
 label {
@@ -65,7 +69,7 @@ button:hover {
 <body style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=600); background-repeat: no-repeat;background-size: cover;">
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/home/" method="post" name="myform" > {% csrf_token %}
+        <form action="{% url 'home' %}" method="POST" name="myform" > {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 

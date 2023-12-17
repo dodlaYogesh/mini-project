@@ -2,7 +2,7 @@ from django.urls import path
 from .views import gas,login,book,faq,services,mybookings,contact,register,index,adminlogin,adminbookings,searching
 
 urlpatterns=[
-    path('home/', gas),
+    path('home/', gas,name="home"),
     path('login/', login),
     path('',index),
     path('book/', book),

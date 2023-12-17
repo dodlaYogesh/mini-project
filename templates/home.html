@@ -19,7 +19,7 @@
                     <li><a href="/services">Services</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/faq">FAQs</a></li>
-                    <li><a href="/">LOGOUT</a></li>
+                    <li><a href="/" onclick="alert('logout successfull')">LOGOUT</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +33,9 @@
             <a href="http://127.0.0.1:8000/book" class="cta-button">Book Now</a>
         </div>
     </section>
-    
+    <!--{% if user %}
+    <div align="center"><h2>welcome {{user.username}} </h2></div>
+    {% endif %}-->
     <section id="benefits">
         <div class="container">
             <h2>Why Choose Us?</h2>

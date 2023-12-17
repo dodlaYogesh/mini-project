@@ -6,7 +6,10 @@ from django.contrib.auth.models import User
 #from .forms import bookingForm
 # Create your views here.
 def gas(request):
+    #un=request.POST.get('username')
+    #uname=registerUser.objects.filter(username__icontains=un)
     return render(request,'home.html')
+
 def index(request):
     return render(request,'index.html')
 def login(request):
@@ -14,7 +17,6 @@ def login(request):
 
 def contact(request):
     if request.method =='POST':
-       
         cname=request.POST['name']
         mail=request.POST['email']
         msg=request.POST['message']
@@ -30,6 +32,13 @@ def services(request):
     return render(request,'services.html')
 
 
+def searching(request):                #searching
+    se=request.POST['search']
+    data=bookings.objects.filter(address__icontains=se)
+    data1=bookings.objects.filter(customerName__icontains=se)
+    data2=bookings.objects.filter(gastype__icontains=se)
+    
+    return render(request,'search.html',{'object':data,'object1':data1,'object2':data2}) 
 
 def mybookings(request):
      data=bookings.objects.all()
@@ -152,13 +161,7 @@ def adminlogin(request):
     return render(request,'search.html',{})'''
     
 
-def searching(request):
-    se=request.POST['search']
-    data=bookings.objects.filter(address__icontains=se)
-    data1=bookings.objects.filter(customerName__icontains=se)
-    data2=bookings.objects.filter(gastype__icontains=se)
-    
-    return render(request,'search.html',{'object':data,'object1':data1,'object2':data2}) 
+
 
 
    
